@@ -1,0 +1,978 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+          <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeff's Home Movies</title>
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/ns2UdGe.gif">
+  <style>
+    
+/*-- FONTS --*/
+    
+@font-face {
+    font-family: AppleKid;
+    src: url('/3-Assets/Fonts/applekid-regular.ttf');
+}
+
+/*--STYLESHEET--*/
+
+* {
+    cursor: url("https://cur.cursors-4u.net/symbols/sym-1/sym54.cur"), url("https://cur.cursors-4u.net/cursor.png"), default;
+}
+
+body {
+    background-color: black;
+    background-image: url("https://64.media.tumblr.com/e2ffb47ddaeb8a7859faa979c4ef90b4/147bfebdf112f180-66/s400x600/1d84aa576f1e32d0ab1f18d99f7392e34b74b557.gif");
+    color: #5e5e5e;
+    font-family: "Comic Sans MS", Lato, Verdana;
+    margin: 0px;
+    position: relative;
+    height: auto;
+    width: 100%;
+  
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+ width: 15px;
+}
+
+#flood {
+    z-index: 1;
+}
+
+#flood-menu {
+    background-color: rgba(20, 0, 50, 0.8);
+    border-top-left-radius: 5px;
+    border-top: dotted 2px orangered;
+    border-left: dotted 2px orangered;
+    
+    color: orange;
+    font-weight: bold;
+    font-style: italic;
+}
+
+a:link {
+  color: yellow;
+  text-decoration: none;
+}
+  
+ /* visited link */
+a:visited {
+  color: hotpink;
+  text-decoration: none;
+}
+            
+            /* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #FF69B4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffB6c1;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00FFFF;
+}
+ 
+ 
+
+.navlink a:hover {
+    color: orange;
+}
+
+/*--Header Section--*/
+
+main {
+    padding:0px;
+    width: inherit;
+    position: center;
+}
+
+.banner-img {
+  width: 100%;
+    height: 60px;
+     min-width:1350px;
+    background-image: url("https://adriansblinkiecollection.neocities.org/dividers/smileydivider.gif");
+    background-size: 1000px;
+    background-repeat: repeat-x;
+    background-position: left;
+    padding: 0px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.marquee-box {
+            width:100%;
+            height:21px;
+            padding-bottom:3px;
+            border-width:2px;
+            border-style:dotted;
+            border-color:hotpink;
+            margin-top:0px;
+            background:black;
+          min-width:1350px;
+           position: relative;
+z-index:100;
+}
+
+/*--Main Body--*/
+
+.container {
+  width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+}
+
+.containerbody {
+    width: 734px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(36, 13, 82);
+    
+    border-radius: 5px;
+    border-style: dotted;
+    border-color: skyblue;
+    border-width: 2px;
+    justify-content: space-around;
+    padding: 8px;
+    text-align: center;
+}
+
+.maincontainer {
+   width:50%;
+            float: start;
+            height: auto;
+            margin-left:350px;
+            flex-wrap: wrap;
+    display: inline;
+    position: absolute;
+           }
+           
+           mark {
+  background-color: HotPink;
+  color:yellow;
+}
+           
+.partywithjeff {
+  height: 330px;
+width: 95%;
+background-image:url('https://64.media.tumblr.com/5521e574ca4c97afdb8f85710589d2eb/tumblr_o734swq8351tuvq5lo1_500.gif');
+opacity: .70;
+border-color:yellow;
+border-style: dashed; 
+border-width: 2px;
+border-radius: 30px;
+display:block;
+z-index:2;
+}
+
+.partywithjefftext{
+             z-index: 200;
+height: 300px;
+width: 42%;
+margin-top:15px;
+margin-left:8px;
+text-align: left;
+font-family:'Comic Sans MS';
+color: #86f4fc;
+opacity:1;
+font-weight: 700;
+font-size:18px;
+overflow: scroll;
+direction: rtl;
+z-index:200;
+}
+
+.partywithjeffCD {
+             z-index: 200;
+             background-image: url("https://64.media.tumblr.com/8702eebf835e866bbd9be2c03bc5b60f/8ef0b0bac74329dd-9d/s540x810/e7b28ba1f417464431c4b3d09513235a7c27642a.pnj");
+height: 200px;
+width: 30%;
+color: #86f4fc;
+font-weight: 700;
+font-size:18px;
+
+}
+
+  
+
+.welcome-sign {
+    float: center;
+    width: 700px;
+    height: 150px;
+    margin-left:150px;
+    background-image: url("https://blob.gifcities.org/gifcities/WBLCF6XA5GCGVB6HOPBEXLPKT7NLDALQ.gif");
+    background-repeat: no-repeat;
+    background-size:100%;
+    padding: 0px;
+    display: block;
+}
+
+
+.left-container { 
+  width: 25%;
+  flex-wrap: wrap;
+  float:left;
+    display: inline;
+    position: absolute;
+}
+
+.colors1 {
+            background: rgb(255,189,200);
+            background: linear-gradient(84deg, rgba(249,85,211,1) 0%, rgba(249,182,35,1) 12%, rgba(205,255,8,1) 25%, rgba(23,241,251,1) 50%, rgba(228,33,250,1) 69%, rgba(247,21,198,1) 91%);
+            color:black;
+            font-weight:bold;
+            height:auto;
+            font-size:20px;
+            padding:0px;
+            text-align:center;
+            border-bottom:3px dotted hotpink;
+            font-weight:600;
+            }
+
+.sidebar {
+            width:98%;
+            float: left;
+            height: auto;
+            position: relative;
+            margin-bottom:5px;
+            font-family:'Courier New';
+            font-weight:bold;
+            text-align:center;
+            line-height: 1.51;
+            
+            border-width:2px;
+            border-style:dotted;
+            border-color:hotpink;
+            
+            overflow:hidden;
+            z-index:2;
+           }
+           
+           .button-row {
+    float: none;
+    width:98%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: block;
+    text-align: center;
+}
+
+.jesuspornad {
+color:white;
+text-align:center;
+
+background-color: rgba(126, 0, 0, 0.89);
+opacity: 1;
+z-index:2;
+width:98%;
+margin-left:1%;
+height: 120px;
+margin-bottom:5px;
+margin-top:5px;
+overflow:hidden;
+}
+
+.jesuspornadinside {
+background-image:url('https://64.media.tumblr.com/a72da1ae6af5fb2d9ff068c59f982404/cfce284f9f549d99-00/s100x200/8413681f70add780ca6abb6db701012e603e54cb.gifv');
+z-index:10;
+width:98%;
+height: 65%;
+position: relative;
+animation-name: JesusPornAd;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+}
+
+.jesuspornadinside p {
+  color:hotpink;
+  font-size:16px;
+  text-align:center;
+  display:inline;
+  
+}
+
+.jeffsmissing {
+color:white;
+background-color:white;
+border-style:solid;
+border-color:#FF0000;
+border-width:8px;
+text-align:center;
+margin-right:10px;
+background-image:url('');
+opacity: 1;
+z-index:2;
+width:90%;
+float: left;
+min-height: 145px;
+position: relative;
+margin-bottom:8px;
+overflow:hidden;
+}
+
+.jeffsmissing1 {
+color:black;
+background-color:white;
+text-align:center;
+font-size:20px;
+background-image:url('');
+opacity: 1;
+z-index:3;
+width:95%;
+margin-left:5%;
+min-height: 50%;
+display:block;
+animation-name: Jeffsmissing1;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.jeffsmissingbox {
+  width:50%;
+  height:100%;
+  display:block;
+  float:left;
+  
+}
+
+.jeffsmissing2 {
+color:white;
+background-color:white;
+text-align:center;
+background-image:url('');
+opacity: 1;
+z-index:3;
+width:50%;
+float: right;
+min-height: 145px;
+display:block;
+animation-name: Jeffsmissing2;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.jeffsmissing3 {
+color:red;
+font-weight:10px;
+text-align:center;
+text-decoration:underline;
+font-size:12px;
+background-image:url('');
+opacity: 1;
+z-index:3;
+width:45%;
+position:absolute;
+top:70px;
+left:10px;
+min-height: 50%;
+display:block;
+}
+
+
+
+.right-container {
+ width: 25%;
+    flex-wrap: wrap;
+    display: inline;
+    position: absolute;
+    margin-left: 1005px;
+}
+
+.petesfoodblogad {
+  width: 95%;
+  margin-left:3%;
+  height:250px;
+  display: relative;
+  z-index: 1;
+  background-color:yellow;
+  text-align:center;
+  vertical-align: text-bottom;
+  color:darkorange;
+  font-family: "Comic Sans MS";
+  
+}
+
+.jeffsantifascistfund {
+  height:45%;
+  width:80%;
+  margin-top:5%;
+  margin-left:10%;
+  border-radius:10px;
+  
+  background-image:url('https://64.media.tumblr.com/d6957f3c06ca528ce00f2e76924603db/tumblr_orabc3fv0X1rrweqzo1_640.gif');
+  background-size:30%;
+}
+
+#counter-area {
+  padding: 2px;
+  background-color: rgba(205, 204, 204,.15);
+  color:hotpink;
+  font-size:12px;
+  font-weight:27px;
+  border-radius: 2px;
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-top:2%;
+  margin-left:25%;
+  margin-bottom:7%;
+}
+
+#counter {
+  color: white;
+  background-image: url('https://i.gifer.com/4dZN.gif');
+  background-size:100%;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
+
+
+.footer {
+   position:relative;
+   
+   margin-top:100%;
+   width:100%;
+   height:60px;  
+    
+}
+
+footer p {
+    color: hotpink;
+    font-size: 12px;
+    text-align: center;
+    font-family: "Comic Sans MS", Lato;
+}
+
+.buttons {
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 0;
+    width: 91px;
+    display: block;
+}
+  
+  @keyframes JesusPornAd {
+   0%   {background-image:url('https://64.media.tumblr.com/a72da1ae6af5fb2d9ff068c59f982404/cfce284f9f549d99-00/s100x200/8413681f70add780ca6abb6db701012e603e54cb.gifv');opacity:0;}
+  50%  {background-image:url('https://64.media.tumblr.com/a72da1ae6af5fb2d9ff068c59f982404/cfce284f9f549d99-00/s100x200/8413681f70add780ca6abb6db701012e603e54cb.gifv');opacity:.7;}
+  100%  {background-image:url('https://64.media.tumblr.com/a72da1ae6af5fb2d9ff068c59f982404/cfce284f9f549d99-00/s100x200/8413681f70add780ca6abb6db701012e603e54cb.gifv');opacity:0;);}
+}
+  
+  @keyframes Jeffsmissing1 {
+   0%   {opacity:1;}
+  50%  {font-size:15px;}
+  100%  {opacity:1;);}
+  }
+  
+  @keyframes Jeffsmissing2 {
+   0%   {opacity:1;}
+  50%  {transform: scaleX(-1);}
+  100%  {opacity:1;);}
+  }
+  
+  
+  
+  /*--MUSIC PLAYER CSS--*/
+  .music-body {
+    height: auto;
+    margin: 0;
+    font-family: "Comic Sans MS", Lato;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin-left: 0px;
+    position: relative;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.music-container p {
+    margin: 0px;
+}
+
+.jukebox-img img{
+    position: absolute;
+    display: inline-block;
+    left: -295px;
+    top: -60px;
+    z-index: 1;
+}
+
+.img-container {
+    box-sizing: border-box;
+    position: relative;
+    width: 110px;
+}
+
+.img-container::after {
+    content: '';
+    background-image: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: -50px;
+    transform: translate(50%, 50%);
+}
+
+.img-container img {
+    box-sizing: border-box;
+    width: inherit;
+    height: 110px;
+    object-fit: cover;
+    position: absolute;
+    bottom:-1120px;
+    left: 50px;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: lightseagreen;
+    
+    animation: rotate 3s linear infinite;
+    
+    animation-play-state: paused;
+}
+
+.music-container.play {     /*--.img-container img--*/
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 3px;
+    position: absolute;
+    right: 100px;
+    top: 210px;
+}
+
+.action-btn {
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    padding: 0px 10px;
+    margin: 0 0px;
+}
+
+.music-info {
+    position: absolute;
+    top: 70px;
+    right: 45px;
+    z-index: 2;
+    width: 290px;
+}
+
+.music-info h1 {
+    margin: 0;
+    font-size: 18px;
+    font-style: italic;
+    color: rgb(255, 183, 0);
+    text-decoration: none;
+}
+
+.progress-container {
+    background-color: rgb(9, 5, 36);
+    border-radius: 0px;
+    margin: 8px 0;
+    height: 5px;
+    width: 100%;
+    z-index: 2;
+    margin-left: 0px;
+    position: relative;
+}
+
+.progress {
+    background-color: rgb(255, 183, 0);
+    background-image: url("/3-Assets/Images/Backgrounds/canvas26.png");
+    object-fit: cover;
+    border-radius: 0px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+    z-index: 2;
+    position: relative;
+}
+
+.playlist {
+    position: absolute;
+    display: inline;
+    margin-top: 30px;
+    width: 204px;
+    height: 190px;
+    margin-left: 120px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: rgb(15, 0, 76, 0.40);
+    border: dotted;
+    border-width: 2px;
+    border-color: lightseagreen;
+    z-index: 1;
+}
+
+.playlist ul, .playlist li {
+    width: 100%;
+    margin-left: -7px;
+    margin-top: 3px;
+    
+    list-style-image: url("https://i.imgur.com/55OuWYf.gif");
+    
+}
+
+.playlist li {
+    font-size: 12.5px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.playlist li:hover {
+    background: rgba(15, 0, 76, 0.40);
+}
+
+.activeSong {
+    background: rgba(15, 0, 76, 0.66);
+}
+
+.trackDuration {
+    position: absolute; 
+    right: 5px;
+    margin-top: 3.5px;
+    font-size: 10px;
+}
+
+.trackInfo {
+    display: inline-block;
+    width: 130px;
+    word-wrap: break-word;
+    margin-left: -5px;
+}
+
+.rotate-anim:hover {
+    animation: rotateBackAndForth 5s ease infinite;
+    animation-play-state: running;
+}
+
+@keyframes rotateBackAndForth {
+    33% {transform: rotate(30deg)}
+    66% {transform: rotate(-30deg)}
+}
+
+  
+ </style>  
+ <body>  
+ 
+ 
+
+ 
+ <!--INDEX-->
+ 
+<main>
+        <div class="banner-img"></div>
+         <div class="marquee-box">
+                <marquee><font color="red"> JEFFS HOME MOVIES <font color="orange"> JEFFS HOME MOVIES <font color="yellow"> JEFFS HOME MOVIES <font color="yellowgreen"> JEFFS HOME MOVIES <font color="green"> JEFFS HOME MOVIES <font color="teal"> JEFFS HOME MOVIES <font color="aqua"> JEFFS HOME MOVIES <font color="purple"> JEFFS HOME MOVIES <font color="fuchsia"> JEFFS HOME MOVIES<font color="red"> JEFFS HOME MOVIES <font color="orange"> JEFFS HOME MOVIES <font color="yellow"> JEFFS HOME MOVIES <font color="yellowgreen"> JEFFS HOME MOVIES <font color="green"> JEFFS HOME MOVIES <font color="teal"> JEFFS HOME MOVIES <font color="aqua"> JEFFS HOME MOVIES <font color="purple"> JEFFS HOME MOVIES <font color="fuchsia"> JEFFS HOME MOVIES<font color="red"> JEFFS HOME MOVIES <font color="orange"> JEFFS HOME MOVIES <font color="yellow"> JEFFS HOME MOVIES <font color="yellowgreen"> JEFFS HOME MOVIES <font color="green"> JEFFS HOME MOVIES <font color="teal"> JEFFS HOME MOVIES <font color="aqua"> JEFFS HOME MOVIES <font color="purple"> JEFFS HOME MOVIES <font color="fuchsia"> JEFFS HOME MOVIES<font color="red"> JEFFS HOME MOVIES <font color="orange"> JEFFS HOME MOVIES <font color="yellow"> JEFFS HOME MOVIES <font color="yellowgreen"> JEFFS HOME MOVIES <font color="green"> JEFFS HOME MOVIES <font color="teal"> JEFFS HOME MOVIES <font color="aqua"> please help us we're trapped in here <font color="purple"> JEFFS HOME MOVIES <font color="fuchsia"> JEFFS HOME MOVIES<font color="red"> JEFFS HOME MOVIES <font color="orange"> JEFFS HOME MOVIES <font color="yellow"> JEFFS HOME MOVIES <font color="yellowgreen"> JEFFS HOME MOVIES <font color="green"> JEFFS HOME MOVIES <font color="teal"> JEFFS HOME MOVIES <font color="aqua"> JEFFS HOME MOVIES <font color="purple"> JEFFS HOME MOVIES <font color="fuchsia"> JEFFS HOME MOVIES<font color="red"> JEFFS HOME MOVIES <font color="orange"> JEFFS HOME MOVIES <font color="yellow"> JEFFS HOME MOVIES <font color="yellowgreen"> JEFFS HOME MOVIES <font color="green"> JEFFS HOME MOVIES <font color="teal"> JEFFS HOME MOVIES <font color="aqua"> JEFFS HOME MOVIES <font color="purple"> JEFFS HOME MOVIES <font color="fuchsia"> JEFFS HOME MOVIES</marquee>
+            </div>
+              
+    
+</main>
+    
+<div class="container">
+        
+        <div class="containerbody" style="width: 1020px; height: 1250px; margin-left: 10%; margin-top: 13px; background-image: url('https://64.media.tumblr.com/6448f4fdd64badae8b1702443525f3c3/147bfebdf112f180-f3/s400x600/876211a32adaa5d760ae84365d34d5bf7d006e70.gifv'); border-color:#4102bf;
+             border-style:dotted;
+             border-width: medium;
+             border-radius:20px; display: inline; position: absolute; z-index: -10; opacity: 60%"></div>
+             
+             
+<div class="left-container">
+
+
+        <!--Visitor Counter-->
+     
+     <div id="counter-area"><span id="counter"> 
+     
+        <script>
+        function r(t,r){return Math.floor(Math.random()*(r-t+1)+t)}var interval=2e3,variation=5,c=r(69,420);$("#counter").text(c),setInterval(function(){var t=r(-variation,variation);c+=t,$("#counter").text(c)},interval);
+        
+        </script>
+        
+        </span> jeffheads communing</div>
+ 
+        <!--I Found Love Online-->
+ 
+        <div class="sidebar" style="border-style:none;background-color:none;"> <a href="https://jesuschristisgay.neocities.org/overcome"><img src= "https://adriansblinkiecollection.neocities.org/g83.gif" style="background-color:none;height:40px; width:98%;margin-bottom:-2%;z-index:4;"></a></div>
+ 
+        <!--Nevigation-->
+ 
+        <div class="sidebar" style="margin-top:0px; margin-bottom:3px;"> 
+                <!-- This section can editted to your liking... --> 
+                <div class="colors1">
+                       Navigation
+                </div>
+              <div class="navlink"><a href="https://jesuschristisgay.neocities.org/jesuschristshow">The Jesus Christ Show!</a></div>
+             <div class="navlink"><a href="https://jeffshomemovies.com/hamletmaschine">hamletmaschine</a></div>
+             <div class="navlink"><a href="https://jesuschristisgay.neocities.org/30days">30 Days of Eating Out</a></div>
+             <div class="navlink"><a href="">IN THIS WORLD YOU WILL HAVE TRIBULATION; BUT TAKE HEART, I HAVE OVERCOME THE WORLD</a></div>
+             <div class="navlink"><a href="">party with Jeff</a></div>
+             <div class="navlink"><a href="">about Jeff</a></div>
+             <div class="navlink"><a href="">follow us</a></div>
+        </div>
+                
+          
+ 
+        <!--Stamp Collection-->
+ 
+        <div class="button-row">
+                <img src="https://adriansblinkiecollection.neocities.org/stamps/a41.gif" style="padding-right:0px;padding-left:3px;">
+                <img src="https://adriansblinkiecollection.neocities.org/stamps/g1.gif" style="padding-right:10px;padding-left:10px;">
+                <img src="https://adriansblinkiecollection.neocities.org/stamps/f23.gif" style="padding-left:0px;">
+            </div>
+ 
+        <!--Jesus Porn Ad-->
+     <div class="sidebar" style="border:none;">
+    
+        <div class= "jesuspornad"> 
+              <div class= "jesuspornadinside" style="position:absolute;">
+                                                </div>    
+                                                
+                <a href="jeffshomemovies.com/jesuschristisgay"><u>Click here!</u> </a><p> for Jesus Christ gay porn</p>
+              <img src="https://blob.gifcities.org/gifcities/65UZKNTSIC3NIF5JSZCDMYTZVIFFS24N.gif" style="position:relative;width:100%;margin-top:5px;">
+        </div></div>
+        
+  
+       <!--Chat Box-->
+
+        <div class="sidebar" style='background-image:url("https://64.media.tumblr.com/e5f81e3fa8168033ceafb164499ddc95/46a95f6f030d0ee0-55/s250x400/6bce54485709abeb22d850aa879d39500d8d95b1.jpg");opacity: 1;border-color:#0011ff;border-style: dashed; border-width: 3px;border-radius: 10px;z-index:10;width:96%'>
+        <img src="https://blob.gifcities.org/gifcities/3DIZCKZKA3QSL6MBNA3BS4HF5WVSYNQB.gif" style="position: absolute; z-index: 1; right: 180px; top: 0px;height:75px;" alt="Chat bubble.">
+        <iframe src="https://www3.cbox.ws/box/?boxid=3549066&boxtag=XAfKh2" width="95%" height="400" object-position="left" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="200" marginwidth="0" scrolling="auto"></iframe>	</div>
+ 
+        <!--Where Is Jeff?-->
+ <div class="jeffsmissing" style="margin-top:4%;">
+    <div class="jeffsmissingbox">
+    <div class="jeffsmissing1"><br>Have you seen JEFF?</div>
+        <div class="jeffsmissing3"><br>please report any JEFF sightings to our tip line!</div></div>
+    <div class="jeffsmissing2"><img src="https://images.squarespace-cdn.com/content/v1/65d65b8c66a8f356256ea7c1/09ca3e42-f89a-4f4f-a42f-b39b1f370a0d/15D828BB-757B-40B0-A9ED-6B63AB1B67FE.png?format=1500w" style="height:140px;margin-top:-1%;"></div>
+ 
+ </div>
+
+
+
+</div>
+  
+            
+<div class="maincontainer">
+           
+        <!--Welcome-->   
+
+        <img src="https://blob.gifcities.org/gifcities/WBLCF6XA5GCGVB6HOPBEXLPKT7NLDALQ.gif" style="min-width:95%;margin-bottom:-10px;margin-top:-20px;margin-right:2%;z-index:100;position: absolute;">
+           
+        <!--Jeffs TV--> 
+           
+        <img src="https://images.squarespace-cdn.com/content/v1/65d65b8c66a8f356256ea7c1/32529cee-b802-42a9-9be1-2df90b2ba67b/Untitled_Artwork.gif" style="min-width: 88%;margin-top:-55px;margin-left:20px;z-index:-1;position:absolute;">
+           
+        <!--Buttons--> 
+           
+        <div class="button-row" style="margin-top:550px;margin-left:-15px;">
+                <img src="https://adriansblinkiecollection.neocities.org/buttons/a58.gif">
+                <img src="https://adriansblinkiecollection.neocities.org/buttons/c1.gif">
+                <img src="https://adriansblinkiecollection.neocities.org/buttons/a82.jpg">
+                <img src="https://adriansblinkiecollection.neocities.org/buttons/a112.gif">
+                <img src="https://adriansblinkiecollection.neocities.org/buttons/5.gif">
+                <img src="https://adriansblinkiecollection.neocities.org/buttons/a116.jpg">
+                <img src="https://88by31.neocities.org/awareness/free_palestine.gif">    
+        </div>
+           
+        <!--Party w Jeff--> 
+        
+       <div class="partywithjeff"> 
+        
+      
+        
+        <!--https://blob.gifcities.org/gifcities/7JIOB2WNFCEJJSLEGBP5A23TOCLTYJKL.gif
+        
+       https://blob.gifcities.org/gifcities/XLKNMC2ORMFWSXWILNPFVCIP7B5HJJY6.gif-->
+        
+          <div class="partywithjefftext"> bro, i heard jeff is throwing a crazy party and everyone you know is gonna be there. its some sort of like, house party or free art show or like immersive experience or whatever. yeah, its gonna be pretty cool. i heard jeff is gonna be there in the back room giving out wet handshakes. no, i dont know what a wet handshake is, bro, but i fucking want one. whatever. there's gonna be a dj and movies and art or whatever. also they might screen some weird german short and a pussy teaser. i mean pussy movie teaser. i mean pussy movie teaser trailer. i mean a regular movie teaser trailer. anyway, i'll see you there, man. love you. mean it. </div>
+        
+        <div class="partywithjeffCD"> </div>
+        </div> 
+           
+        <!--Donate to Jeff--> 
+        
+        <img src="https://64.media.tumblr.com/35dabb3ea2c3a8ddca431491065ec625/c3c189eab805cb9b-b8/s1280x1920/c896fa9fa1483a29a216f8c2b91c1bf2d9df83b0.gifv" style="height:60px;margin-left:6%;margin-top:-20px;">
+        
+        
+         <!--Audio-->
+         <div class="sidebar" style="height: 270px;
+         width:93%; 
+         margin-top: 0px;
+         margin-bottom:200px;
+         background-image: url('https://64.media.tumblr.com/239532cd7c35d582c12bbd5aa189de96/c1997977b9c23a74-a1/s100x200/e7c62782757f6dc5432d49072f8bb208feb6c45b.gifv');
+         border-style:dashed; 
+         border-radius:12px;
+         border-color:rgba(15, 0, 76, 0.66);
+         border-width:3px;
+         text-align:left;
+         color:aqua">
+            <h2 style="z-index: 2; position: relative;float:left;margin-top:-5px;color:darkorange;font-family: 'Comic Sans MS';font-weight:lighter;text-decoration:underline;font-style:italic;">  </h2>
+            <div class="music-body">
+        <div class="music-container">
+        <img src="https://blob.gifcities.org/gifcities/37GATFJABTZ7BU2GFU65ATATSVVYCO6P.gif" style="position: absolute; margin-top:30px; margin-left: -200px; z-index: 1; width: 50px;transform: scaleX(-1);">  
+        <img src="https://blob.gifcities.org/gifcities/LP3JULUNWL2VJYSDUXP6YTYELNI6DD4E.gif" style="position: absolute; margin-top: -35px; margin-left: -140px; z-index: 1; width: 120px;">
+        <img src="https://blob.gifcities.org/gifcities/37GATFJABTZ7BU2GFU65ATATSVVYCO6P.gif" style="position: absolute; margin-top:30px ; margin-left: -10px; z-index: 1; width: 50px;">
+        <div class="music-info">
+            <h1 id="title" style="margin-top: 10px; background: rgba(15, 0, 76, 0.66); width: 290px; z-index: 2; position: relative;text-align:center;">Title</h1>
+            <p style="display: inline;color:hotpink;">Artist: </p><p id="artist" style="display: inline;">Artist</p><br>
+            <p style="display: inline;color:#03fc45;">Album: </p><p id="album" style="display: inline;">Album</p>
+            <div class="progress-container" style="width: 290px; margin-right: -50px; margin-top: 5px;">
+              <div class="progress"></div>
+                <p style="font-size: 15px; display: inline;color:yellow;">00:00</p>
+                <p style="font-size: 15px; display: inline; position: absolute; right: 0px;color:yellow;" id="duration">Duration</p>
+            </div>
+        </div>
+
+            <audio src="https://64.media.tumblr.com/da88f2e22df6f0f0538e6af860fd4a4b/756b89b50a525653-f9/6119360958047ba38712e2db5657319c2a280863.mp3" id="audio"></audio>
+            <div class="img-container">
+                <img src="" alt="" id="cover" />
+            </div>
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                <img src="https://blob.gifcities.org/gifcities/ZI6FURGEENCFKXPZPZGX3BM436YJJFHF.gif">
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                <img src="https://blob.gifcities.org/gifcities/YLBUZONDSSOVWZMW4CT7Y37V3DUA3PGT.gif">
+                </button>
+                <button id="next" class="action-btn">
+                <img src="https://blob.gifcities.org/gifcities/3LERRZSYIVUMUWC3FWFVOKLIXQS3PXWD.gif">
+                </button>
+            </div>
+            <p style="position: absolute; margin-top: 4px; margin-left: -50px; font-size: 16px; font-weight: 500; text-decoration: underline;"></p>
+            <div class="playlist">
+            <ul class="tracklist">
+                <li data-index="0" onclick="setTrack(0)"><span class="trackInfo"><span class="trackTitle">Title1</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="1" onclick="setTrack(1)"><span class="trackInfo"><span class="trackTitle">Title2</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="2" onclick="setTrack(2)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="3" onclick="setTrack(3)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="4" onclick="setTrack(4)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="5" onclick="setTrack(5)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="6" onclick="setTrack(6)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="7" onclick="setTrack(7)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="8" onclick="setTrack(8)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="9" onclick="setTrack(9)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="10" onclick="setTrack(10)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="11" onclick="setTrack(11)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+                <li data-index="12" onclick="setTrack(12)"><span class="trackInfo"><span class="trackTitle">Title3</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration">Duration</span></li>
+            </ul>
+            </div>
+            <img src="https://blob.gifcities.org/gifcities/NR2XZ3AHSIBYXOHVXTDUUBNINJOFZTY7.gif" style="position: absolute; display: inline; top: 110px; left: 180px; width: 190px; transform: scaleX(-1); z-index: 2;">
+        </div>
+        </div>
+        </div>
+         <!--Footer-->
+                 
+        <footer>
+        <p> <img src="https://odditycommoddity.neocities.org/3-Assets/Images/Web/Pixels/badge.gif" style="height:60px;"></p>
+        <p> jeff's home movies :) llc. <br> 2024 </p>
+        </footer>
+
+</div>  
+  
+        
+
+<div class="right-container">
+
+        <!--GermanVersion-->
+        <div class="sidebar" style="border-style:none; background:none;"> <img src="https://blob.gifcities.org/gifcities/QNPZWOR42TSQ25FPBBVYO4URBMWEO5ON.gif" style="width:23%;height:30px;margin-top:3%;margin-bottom:1%;margin-right:50%;"> </div>
+
+        <!--HamletMachine-->
+
+        <div class="sidebar" style="border-style:none; background:none;"> <img src="https://64.media.tumblr.com/3bc6ebdf16f66ad76008abf654cca938/c3c189eab805cb9b-97/s540x810/2af783438b7ae48bdcbcd81057950aaf6d2ce013.gif" style="max-width:98%;width:390px;height:150px;margin-top:2%;margin-bottom:1%;"></div>
+
+        <!--Email Us-->
+ 
+        <div class="sidebar" style='background-image:url("https://64.media.tumblr.com/2ebb8344be4aee2840c6e657af8baabf/1be28416ce7f8a6d-43/s2048x3072/c1368fd55e13ddb6a12a5f994dab4943f261c471.pnj");background-size: 50%;opacity: 1;border-color:yellow;border-style: dotted; border-width: 2px;border-radius: 10px;height:130px;width:98%;margin-top:-10px;margin-bottom:-10px;'> 
+        
+              <!--dancing ladies-->
+              <img src="https://blob.gifcities.org/gifcities/WMRXPVTUINVWUGQE4SLXRI2SJG66RK66.gif" style="position: absolute; z-index: 1; width:25%;left: -15px; top: 10px;">
+              <img src="https://blob.gifcities.org/gifcities/WMRXPVTUINVWUGQE4SLXRI2SJG66RK66.gif" style="position: absolute; z-index: 1;width:25%; right: -13px; top: 10px;">      
+              <!--dolphins-->
+              <img src="https://blob.gifcities.org/gifcities/DWR2XIWUCMDV2EQ7D7QVTP4CM4DAXB7W.gif" style="position: absolute; z-index: 1; right: 70px; top: 10px;">
+ 
+        </div>
+ 
+        <!--Jeff Pet-->
+        <div class="sidebar" style="margin-top: 3%; margin-left: 1%; margin-bottom: -5px;border-style:none;background:none;">
+          <iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Jeff&dob=1758378647&gender=b&element=Air&pet=ozwomp.gif&map=night.gif&background=htt%3A%2F%2F64.media.tumblr.com%2Fab12465ec436e1fd2ca4f0f31bb700d6%2Fcfbb86aecf48af8e-69%2Fs400x600%2Fa5f137d9a77ecd629f27f8b8de5972e5dba48be9.pnj&tablecolor=%2300f004&textcolor=%2300ffb3" frameborder="0"></iframe></div>
+  
+        <!--Consult the Oracle-->
+
+        <div class="sidebar" style="border-style:none;background:none;"> <img src="https://www.internetbumperstickers.com/066811/o01/oracle.gif" style="min-width:95%;max-height:40px;"></div>
+   
+        <!--Pete's Food Blog-->
+        <div class="sidebar" style="border-style:none;background:none;">
+            <div class="petesfoodblogad">
+            <img src="https://blob.gifcities.org/gifcities/4RW27OUGM2IF5VNG75SC3RQW7DN34RJ7.gif" style="min-width:85%;margin-top:5%;">
+            <u> Pete's Food Blog</u></div>
+            </div>
+            
+        <!--Jeff's AntiFascist Fund-->
+        <div class="sidebar" style="font-family: 'Comic Sans MS';color:yellow; font-weight:20px;height:200px;width:95%;margin-top:1%;margin-left:1%;border-color:yellow;border-radius:15px;background-image: url('https://64.media.tumblr.com/fbafdcd7e7fbd28c1cb624d08e712082/3d2f95415d023720-59/s75x75_c1/c52690547d5e8d80d584f0321cfe4406f32e1350.gifv');">
+        <mark><br>jeff's put a #$&*?@ in the %&#!* of * $&?@!^# promo</mark>
+        <div class="jeffsantifascistfund">
+         <a href="https://www.blacktranstravelfund.com/donate.html"><img src="https://64.media.tumblr.com/faf1b0559b79fe739ee7cd38db89d71d/fa536f028e3dbb5f-44/s1280x1920/4db4b5f9f957a06c15f7fab61f3d59845532e2ce.gifv" style=width:98%;margin-top:0%;></a> </div>
+        
+        </div>
+        
+        
+</div>
+    
+    <script src="musicplayer.js"> </script>
+ 
+    
+     </body>
+</html>
